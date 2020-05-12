@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>Menu</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            function iniciarJogo() {
+                var nivel = document.getElementById('level').value
+                if (nivel === "") {
+                    alert('Selecione um nivel para iniciar o joga');
+                    return false;
+                }
+                window.location.href = 'game.html?' + nivel;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            
+            <img class="ajust-game" src="imagens/game.png" alt="">
+
+            <div class="d-flex justify-content-center">
+                <div class="mb-2">
+                    <select class="form-control" id="level">
+                        <option value="" >--Selecione o nivel--</option>
+                        <option value="facil">Facil</option>
+                        <option value="normal">Normal</option>
+                        <option value="dificil">Dificil</option>
+                    </select>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type= "button" class="btn btn-danger btn-lg" onclick= "iniciarJogo()">Iniciar jogo</button>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
